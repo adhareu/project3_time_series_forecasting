@@ -1,157 +1,86 @@
-📈 Time Series Sales Forecasting (Superstore Dataset)
-📌 Project Overview
+# 📈 Project 3: Superstore Sales Forecasting (ARIMA)
 
-This project focuses on time series analysis and forecasting using historical sales data from a retail Superstore dataset.
-The goal is to:
+## 📌 Overview
+This project performs **time series analysis and forecasting** on Superstore sales data using an **ARIMA model**.  
+The goal is to predict future monthly sales based on historical trends.
 
-Analyze long-term sales trends
+---
 
-Decompose the time series into components
+## 🗂 Dataset
+**File:** `data/superstore.csv`  
+**Target Column:** `Sales`  
+**Date Column:** `Order Date`
 
-Build an ARIMA model
+The data is aggregated into **monthly sales** for modeling.
 
-Forecast future sales for the next 12 months
+---
 
-🗂 Dataset
+## ⚙️ Technologies Used
+- Python  
+- Pandas  
+- Matplotlib  
+- Statsmodels (ARIMA / SARIMAX)
 
-Source: Superstore sales dataset
+---
 
-File: data/superstore.csv
+## 📊 Model Summary
+- Model: **ARIMA(1,1,1)**
+- Observations: 48 months (2015–2018)
+- Forecast Horizon: 12 months (2019)
 
-Records: 9,994 rows × 21 columns
+---
 
-Target Variable: Sales
+## 🔮 Forecast Output
+The model forecasts sales for the next 12 months:
+- Shows a stable sales pattern around **72,730**
 
-Date Column: Order Date
+---
 
-⚙️ Technologies Used
+## 🧪 Steps Performed
+1. Data cleaning & date parsing  
+2. Monthly aggregation  
+3. Stationarity check  
+4. ARIMA modeling  
+5. Model evaluation  
+6. 12-month forecasting  
+7. Visualization  
 
-Python
+---
 
-Pandas
+## ▶️ How to Run
 
-NumPy
+```bash
+pip install pandas matplotlib statsmodels
+python project3_time_series_forecasting.py
+```
 
-Matplotlib
+---
 
-Statsmodels
+## 📁 Project Structure
 
-Scikit-learn
-
-🔍 Steps Performed
-1️⃣ Data Preprocessing
-
-Loaded CSV file
-
-Converted Order Date to datetime
-
-Set date as index
-
-Resampled data to monthly total sales
-
-2️⃣ Exploratory Time Series Analysis
-
-Visualized monthly sales trend
-
-Observed upward trend with fluctuations
-
-3️⃣ Time Series Decomposition
-
-Decomposed the series into:
-
-Trend
-
-Seasonal
-
-Residual
-
-This helped understand underlying patterns in sales.
-
-4️⃣ Model Building (ARIMA)
-
-Built an ARIMA(1,1,1) model
-
-Evaluated model using AIC and residual diagnostics
-
-5️⃣ Forecasting
-
-Forecasted sales for the next 12 months (2019)
-
-Generated future sales predictions
-
-📊 Results
-🔹 Forecasted Sales (Next 12 Months)
-2019-01-31    75259
-2019-02-28    73306
-2019-03-31    72862
-2019-04-30    72760
-2019-05-31    72737
-2019-06-30    72732
-2019-07-31    72731
-2019-08-31    72731
-2019-09-30    72730
-2019-10-31    72730
-2019-11-30    72730
-2019-12-31    72730
-
-📈 Key Insight
-
-Sales are expected to:
-
-Slightly decline initially
-
-Then stabilize around ~72,730 per month
-
-📁 Project Structure
-project3_time_series_forecasting/
+```
+project3/
 │
 ├── data/
 │   └── superstore.csv
 │
 ├── project3_time_series_forecasting.py
-├── requirements.txt
 └── README.md
+```
 
-🚀 How to Run the Project
-1️⃣ Create virtual environment
-python -m venv venv
-venv\Scripts\activate
-2️⃣ Install dependencies
-pip install -r requirements.txt
-3️⃣ Run the script
-python project3_time_series_forecasting.py
-📌 Skills Demonstrated
+---
 
-Time series preprocessing
+## 📌 Output
+- Line chart of historical sales
+- Forecasted sales for next 12 months
+- Model diagnostics
 
-Data resampling
+---
 
-Trend & seasonality analysis
+## ✍️ Author
+**Asif Iqbal**  
+Senior .NET Developer & Data Science Learner  
 
-ARIMA modeling
+---
 
-Forecasting
-
-Data visualization
-
-🧠 Business Use Case
-
-This model can help businesses:
-
-Predict future revenue
-
-Plan inventory
-
-Detect long-term sales trends
-
-Support data-driven decision making
-
-✨ Future Improvements
-
-Implement Seasonal ARIMA (SARIMA)
-
-Add confidence intervals to forecasts
-
-Compare with Prophet or LSTM models
-
-Add automated parameter tuning (auto_arima)
+⭐ If you like this project, give it a star!
