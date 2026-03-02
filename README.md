@@ -93,6 +93,7 @@ Generated future sales predictions
 2019-10-31    72730
 2019-11-30    72730
 2019-12-31    72730
+
 📈 Key Insight
 
 Sales are expected to:
@@ -110,6 +111,7 @@ project3_time_series_forecasting/
 ├── project3_time_series_forecasting.py
 ├── requirements.txt
 └── README.md
+
 🚀 How to Run the Project
 1️⃣ Create virtual environment
 python -m venv venv
